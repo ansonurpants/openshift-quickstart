@@ -1,4 +1,4 @@
-source 'http://mirror1.prod.rhcloud.com/mirror/ruby/'
+#source 'http://mirror1.prod.rhcloud.com/mirror/ruby/'
 source :rubygems
 
 gem 'rails', '3.1.1'
@@ -20,6 +20,19 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+# To use ActiveModel has_secure_password
+gem 'bcrypt-ruby'
+
+# Geokit
+gem 'geokit'
+
+# Stripe for payments
+gem 'stripe'
+
+#gem 'geokit-rails3', :path => 'vendor/plugins/geokit-rails3'
+
+gem 'aws-ses', "~> 0.4.4", :require => 'aws/ses'
 
 # Use unicorn as the web server
 # gem 'unicorn'
