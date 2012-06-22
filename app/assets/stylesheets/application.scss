@@ -1,0 +1,311 @@
+// Place all the styles related to the Store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$glow-color: #eeeeb2;
+$glow-properties: 1px 1px 8px $glow-color;
+$home-color: #ffbb02;
+$home-bg-color: #FFFFE5;
+$phomenow-color: #ff0002;
+$phomenow-bg-color: #FFECB3;
+$munchy-color: #7a16fb;
+$munchy-bg-color: #C6FFB3;
+$burrito-color: #009727;
+$burrito-bg-color: #FFC6B3;
+$drinks-color: #3EC4ED;
+$drinks-bg-color: #CCCCFF;
+$ezaccess-color: #0c00ff;
+$ezaccess-bg-color: #D9D9D9;
+$body-bg-color: #fff;
+$main-width: 1100px;
+
+body {
+  background: $body-bg-color;
+  padding: 0;
+  margin: 0; 
+  
+  .pointer{
+    cursor: pointer;
+    }
+  }
+
+#notice{
+  position:absolute;
+  z-index:9999;
+  top: 10px;
+  left: 20px;
+}
+
+#top-bar-container{
+
+  #top-bar {
+    box-shadow: 0px 0px 10px #000;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 37px;
+    background-color: #f9d565; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f9d565 0%, #9f7705 95%, #b59935 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9d565), color-stop(95%,#9f7705), color-stop(100%,#b59935)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f9d565 0%,#9f7705 95%,#b59935 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f9d565 0%,#9f7705 95%,#b59935 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f9d565 0%,#9f7705 95%,#b59935 100%); /* IE10+ */
+    background: linear-gradient(top,  #f9d565 0%,#9f7705 95%,#b59935 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9d565', endColorstr='#b59935',GradientType=0 ); /* IE6-9 */
+  
+    #nav-bar {
+      position:relative;
+      width: 1100px;
+      margin: auto auto; 
+      overflow: fixed;
+
+      }
+    #logo_text {
+      float: left; }
+    #login_logout_buttons {
+      float: right;
+      top: 5px;
+      height: 32px; } }
+}
+
+#banner-container{
+  position:static;
+  width: 100%;
+  min-width:$main-width;
+  margin:auto auto;
+  height: 250px;
+  background: black;
+  padding: 0; 
+  border-bottom: solid 1px #666;
+  #banner {    
+    width: $main-width;
+    margin: 37px auto 0;
+    img{
+      &#lno-logo{
+        height: 250px;
+      }
+    }
+  }  
+}
+
+
+#container {
+  width: $main-width;
+  margin: 20px auto;
+  position:relative;
+  #store_home {
+    display: block; }
+  .store_logo{
+    float:right;
+  }
+  .store_menu {
+    background: #fff;
+    padding: 0px 10px 0;
+    border-radius: 4px 4px; 
+    min-height: 500px;
+    }
+  #store_tabs {
+    text-align: center;
+    float:left;
+    
+    .link_identifier{
+       background-image: url(overlay-button.png);
+       background-size: 1px 100%;
+       position:relative;
+       margin: 20px;
+       display: block;
+       width: 180px;
+       height: 50px;
+       color: #fff;
+       font-weight: bold;
+       text-decoration: none;
+       border-radius: 8px;
+       padding: 10px;
+       /*Transition*/
+       -webkit-transition: -webkit-box-shadow 0.3s ease-out;
+       -moz-transition: -moz-box-shadow 0.3s ease-out;
+       -o-transition: box-shadow 0.3s ease-out;
+       -ms-transition: box-shadow 0.3s ease-out;
+       transition: box-shadow 0.3s ease-out;
+        &:active{
+          top: 1px;
+        }
+        &.glow{
+         -moz-box-shadow: $glow-properties;
+         -webkit-box-shadow: $glow-properties;
+          box-shadow: $glow-properties;
+        }
+        &#show_home {
+         background-color: $home-color;         
+         &.dim{
+           background-color: darken($home-color, 45%);
+         }
+         &:hover{
+           background-color: darken($home-color, 23%);
+           &.glow{
+             background-color: $home-color;
+           }
+         }
+        }
+        &#show_pho_me_now{
+          background-color: $phomenow-color;        
+         &.dim{
+           background-color: darken($phomenow-color, 45%);
+         }
+         &:hover{
+           background-color: darken($phomenow-color, 23%);
+           &.glow{
+             background-color: $phomenow-color;
+           }
+         }
+        }
+        &#show_munchy_munchy_hippos{
+          background-color: $munchy-color;          
+         &.dim{
+           background-color: darken($munchy-color, 51%);
+         }
+         &:hover{
+           background-color: darken($munchy-color, 26%); 
+           &.glow{
+             background-color: $munchy-color;
+           }
+         }
+        }
+        &#show_burrito_supremo{
+          background-color: $burrito-color;         
+         &.dim{
+           background-color: darken($burrito-color, 28%);
+         }
+         &:hover{
+           background-color: darken($burrito-color, 14%); 
+           &.glow{
+             background-color: $burrito-color;
+           }
+         }
+        }
+        &#show_drinks{
+          background-color: $drinks-color;         
+         &.dim{
+           background-color: darken($drinks-color, 50%);
+         }
+         &:hover{
+           background-color: darken($drinks-color, 25%); 
+           &.glow{
+             background-color: $drinks-color;
+           }
+         }
+        }
+        &#show_ez_access{
+          background-color: $ezaccess-color; 
+         &.dim{
+           background-color: darken($ezaccess-color, 47%);
+         }
+         &:hover{
+           background-color: darken($ezaccess-color, 24%); 
+           &.glow{
+             background-color: $ezaccess-color;
+           }
+         }
+        }
+     }
+    }
+  .main_area { }
+  #menu_outside {
+    width: 800px;
+    float:right;
+    border-radius: 6px 4px;
+    background-color: #E0AB1B;
+    padding: 20px;
+    margin: 0 0 20px;
+    background-color: $home-color; /* Old browsers */
+    background-image: url(overlay-button.png);
+    background-size: 1px 100%;
+    box-shadow: $glow-properties;
+    
+    #store_logo{
+      img {
+        display:none;
+        margin: 10px 0 15px;
+      }
+    }
+  }
+
+  #menu_area {
+    .store_menu{
+      background-image: url(overlay-button.png);
+      background-size: 1px 100%;
+    }
+    #checkout_page {
+      background-color: $home-bg-color;
+    }
+    #store_home{
+      background-color: $home-bg-color;
+    }
+    #store_pho_me_now{
+      background-color: $phomenow-bg-color;      
+    }
+    #store_munchy_munchy_hippos{
+      background-color: $munchy-bg-color;      
+    }
+    #store_burrito_supremo{
+      background-color: $burrito-bg-color;      
+    }
+    #store_drinks{
+      background-color: $drinks-bg-color;      
+    }
+    #store_ez_access{
+      background-color: $ezaccess-bg-color;      
+    }
+
+    table.menu {
+      width: 100%;
+      margin: auto auto;
+      text-align: center; 
+      td {
+        width: 200px;
+        height: 200px;
+        vertical-align: bottom; }
+    }
+
+    p.item_price {
+      font-weight: bold;
+      margin: 0; 
+      
+      .plus_1{
+        color: #00FF66;
+        opacity: 100;
+      }
+    } 
+  } 
+}
+
+.colorbox #signup_fields {
+  float: left; }
+
+#delayed-drops {
+  float: right;
+  .drop-down-menu {
+    .drops{
+      position: absolute;
+      z-index: 100;
+      display: none;
+      float: left;
+      width: 300px; 
+      background: #fff;
+    }  
+    &:hover .drops, &.show .drops{
+      display:block;
+    }
+    &.with-js .drops{
+      display:none !important; 
+    }
+  }  
+}
+
+footer {
+  clear:right;
+  background: #151515;
+  width: $main-width;
+  margin: auto auto; }
